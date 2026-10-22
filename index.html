@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Límites y Funciones</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Math.js para cálculos matemáticos -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
+    <!-- Chart.js para las gráficas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Calculadora de Límites y Funciones</h1>
+        
+        <div class="input-group">
+            <label for="functionInput">Ingresa tu función f(x) o Límite:</label>
+            <input type="text" id="functionInput" placeholder="Ej. x^2 - 4 / x - 2 o x^2 + 3x">
+        </div>
+
+        <div class="input-group" id="limitGroup">
+            <label for="limitInput">¿Evaluar límite cuando (x) tiende a (opcional):</label>
+            <input type="text" id="limitInput" placeholder="Ej. 2 (déjalo vacío si solo quieres graficar)">
+        </div>
+
+        <!-- Agregamos un contenedor para los botones -->
+<div class="button-group">
+    <button id="calculateBtn" type="button">Calcular y Graficar</button>
+    <button id="clearEqBtn" type="button" class="btn-secondary">Limpiar Ecuación</button>
+    <button id="clearAllBtn" type="button" class="btn-danger">Limpiar Todo</button>
+</div>
+
+        <div class="results-section">
+            <div class="steps-container">
+                <h3>Procedimiento / Pasos</h3>
+                <div id="stepsOutput" class="output-box">Aquí aparecerá el desglose paso a paso...</div>
+            </div>
+
+            <div class="graph-container">
+                <h3>Gráfica</h3>
+                <canvas id="functionGraph"></canvas>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
